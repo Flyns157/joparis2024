@@ -8,19 +8,28 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('taches', function (Blueprint $table) {
             $table->id();
+            $table->datetime('expiration')->nullable(false);
+            $table->string('categorie')->default('A Faire')->nullable(false);
+            $table->boolean('effectuee')->default(false);
+            $table->text('description');
             $table->timestamps();
+
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('taches');
     }

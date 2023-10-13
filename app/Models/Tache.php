@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Tache extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'expiration' => 'datetime',
+    ];
 }
