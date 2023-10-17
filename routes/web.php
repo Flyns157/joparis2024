@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/taches', [TacheController::class,'index'])->name('taches.index');
+Route::get('/sports', [TacheController::class,'index'])->name('sports.index');

@@ -14,7 +14,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sports', function (Blueprint $table) {
-            $table->id();
             $table->string('nom')->nullable(false)->primary();
             $table->string('description');
             $table->integer('annee_ajout')->nullable(false);

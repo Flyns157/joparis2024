@@ -1,17 +1,16 @@
-Dans le code php / laravel suivant fais en sorte que les sport générés soient suppriméde la liste des sports :
 <?php
 
 namespace Database\Factories;
 
-use App\Models\Tache;
+use App\Models\Sport;
 use DateTime;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Collection;
 
 /**
- * @extends Factory<Tache>
+ * @extends Factory<Sport>
  */
-class TacheFactory extends Factory {
+class SportFactory extends Factory {
 
     /**
      * Define the model's default state.
@@ -21,6 +20,9 @@ class TacheFactory extends Factory {
     public function definition() {
         static $sports = new Collection(['Athlétisme', 'Aviron', 'Badminton', 'Basketball', 'Boxe', 'Canoë', 'Cyclisme', 'Escrime', 'Football', 'Golf', 'Gymnastique', 'Haltérophilie', 'Handball', 'Hockey', 'Judo', 'Lutte', 'Pentathlon moderne', 'Rugby', 'Natation', 'Sports équestres', 'Taekwondo', 'Tennis', 'Tir', 'Triathlon', 'Voile']);
         $sport = $this->faker->randomElement($sports);
+        $sports = $sports->filter(function($value) use ($sport) {
+            return $value != $sport;
+        });
         return [
             'nom' => $sport,
             'description' => $this->faker->sentence,
