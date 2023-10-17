@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('sports', function (Blueprint $table) {
             $table->id();
-            $table->string('nom')->nullable(false);
+            $table->string('nom')->nullable(false)->primary();
             $table->string('description');
             $table->integer('annee_ajout')->nullable(false);
             $table->integer('nb_disciplines');
