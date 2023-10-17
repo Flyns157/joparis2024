@@ -8,17 +8,27 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * 
+     * @return void
      */
     public function up(): void
     {
         Schema::create('sports', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nom')->nullable(false);
+            $table->string('description');
+            $table->integer('annee_ajout')->nullable(false);
+            $table->integer('nb_disciplines');
+            $table->integer('nb_epreuves')->nullable(false);
+            $table->datetime('date_debut')->nullable(false);
+            $table->datetime('date_fin');
         });
     }
 
     /**
      * Reverse the migrations.
+     * 
+     * @return void
      */
     public function down(): void
     {

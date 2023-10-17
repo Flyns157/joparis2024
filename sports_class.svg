@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="us-ascii" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="191px" preserveAspectRatio="none" style="width:165px;height:191px;background:#FFFFFF;" version="1.1" viewBox="0 0 165 191" width="165px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <!--class Sport-->
+        <g id="elem_Sport">
+        <rect codeLine="2" fill="#F1F1F1" height="170.375" id="Sport" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="144" x="7" y="7"/>
+        <ellipse cx="54.25" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+        <path d="M56.5938,18.6719 C55.6563,18.2344 55.0625,18.0938 54.1875,18.0938 C51.5625,18.0938 49.5625,20.1719 49.5625,22.8906 L49.5625,24.0156 C49.5625,26.5938 51.6719,28.4844 54.5625,28.4844 C55.7813,28.4844 56.9375,28.1875 57.6875,27.6406 C58.2656,27.2344 58.5938,26.7813 58.5938,26.3906 C58.5938,25.9375 58.2031,25.5469 57.7344,25.5469 C57.5156,25.5469 57.3125,25.625 57.125,25.8125 C56.6719,26.2969 56.6719,26.2969 56.4844,26.3906 C56.0625,26.6563 55.375,26.7813 54.6094,26.7813 C52.5625,26.7813 51.2656,25.6875 51.2656,23.9844 L51.2656,22.8906 C51.2656,21.1094 52.5156,19.7969 54.25,19.7969 C54.8281,19.7969 55.4375,19.9531 55.9063,20.2031 C56.3906,20.4844 56.5625,20.7031 56.6563,21.1094 C56.7188,21.5156 56.75,21.6406 56.8906,21.7656 C57.0313,21.9063 57.2656,22.0156 57.4844,22.0156 C57.75,22.0156 58.0156,21.875 58.1875,21.6563 C58.2969,21.5 58.3281,21.3125 58.3281,20.8906 L58.3281,19.4688 C58.3281,19.0313 58.3125,18.9063 58.2188,18.75 C58.0625,18.4844 57.7813,18.3438 57.4844,18.3438 C57.1875,18.3438 56.9844,18.4375 56.7656,18.75 L56.5938,18.6719 Z " fill="#000000"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="74.75" y="27.8467">
+            Sport
+        </text>
+        <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="150" y1="39" y2="39"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="13" y="55.9951">
+            int id,
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="13" y="72.292">
+            string nom,
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="13" y="88.5889">
+            string description,
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="13" y="104.8857">
+            int annee_ajout,
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="13" y="121.1826">
+            int nb_disciplines,
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="13" y="137.4795">
+            int nb_epreuves,
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="13" y="153.7764">
+            date date_debut,
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="13" y="170.0732">
+            date date_fin
+        </text>
+    </g>
+        <!--SRC=[JSlH3S8m30JG_qpX0ReD0qHfV52ZnevY5maXTWTH4FsnxfxEYp08hSUT6c8nJdKjxdJgDe8UYKWqI7Xw9uyXUY6rTcWChqDwYEdqNHTL89UhRV4ZdJEBL-chAFoWw0FRRISkWS_9Z7d__TDPD3rV]-->
+    </g>
+</svg>
