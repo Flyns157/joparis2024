@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TacheController;
+use App\Http\Controllers\SportController;
+use App\Models\Sport;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,4 @@ Route::get('/', function () {
 });
 
 Route::get('/taches', [TacheController::class,'index'])->name('taches.index');
-Route::get('/sports', [TacheController::class,'index'])->name('sports.index');
+Route::get('/sports', [SportController::class,'index'])->name('sports.index');

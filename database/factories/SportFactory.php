@@ -30,9 +30,8 @@ class SportFactory extends Factory {
             'nb_disciplines' => $this->faker->numberBetween(1, 10),
             'nb_epreuves' => $this->faker->numberBetween(1, 20),
             'date_debut' => $this->faker->dateTimeBetween('2024-07-26', '2024-08-11'),
-            'date_fin' => $this->faker->dateTimeBetween($sport['date_debut'], '2024-08-11'),
+            'date_fin' => $this->faker->dateTimeBetween('2024-08-11', '2024-08-11'),
         ];
-
     }
 }
 ?>
