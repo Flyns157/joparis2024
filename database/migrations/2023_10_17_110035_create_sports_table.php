@@ -8,7 +8,7 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     * 
+     *
      * @return void
      */
     public function up(): void
@@ -21,12 +21,14 @@ return new class extends Migration
             $table->integer('nb_epreuves')->nullable(false);
             $table->datetime('date_debut')->nullable(false);
             $table->datetime('date_fin');
+            $table->datetime('created_at')->nullable(false);
+            $table->datetime('updated_at');
         });
     }
 
     /**
      * Reverse the migrations.
-     * 
+     *
      * @return void
      */
     public function down(): void

@@ -9,6 +9,13 @@ class Tache extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'expiration',
+        'categorie',
+        'effectuee',
+        'description'
+    ];
+
     protected $casts = [
         'expiration' => 'datetime',
     ];
