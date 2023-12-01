@@ -20,5 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/taches', [TacheController::class,'index'])->name('taches.index');
-Route::get('/sports', [SportController::class,'index'])->name('sports.index');
-// ressource
+Route::resource('sports', SportController::class);

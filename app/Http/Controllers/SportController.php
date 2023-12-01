@@ -2,18 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Sport;
 
 class SportController extends Controller
 {
-    public function index($search = null)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
     {
-        if (!isset($search))
-        {
-            $sports = Sport::all();
-        } else {
-            $sports = Sport::where('nom', 'LIKE', '%'.$search.'%')->get();
+        $search = $request->query('sport', null);
+        $sort = $request->query('sort', 'asc');
+        $nb_epreuves = $request->query('nb_epreuves', 'all');
+        if($nb_epreuves !== 'all'){
+            $sports = Sport::where('nb_epreuves', '=', $nb_epreuves);
+        }else{
+            $sports = Sport::query();
         }
-        return view('sports.index', ['sports' => $sports, 'search' => $search]);
+        if (isset($search))
+        {
+            $sports = $sports->where('nom', 'LIKE', '%'.$search.'%');
+        }
+        $sports = $sports->get();
+        if($sort === 'asc'){
+            $sports = $sports->sortByDesc('date_debut');
+        }else{
+            $sports = $sports->sortBy('date_debut');
+        }
+        return view('sports.index', [
+            'sports' => $sports,
+            'title' => 'Liste des sports',
+            'sort' => $sort,
+            'nb_epreuves' => $nb_epreuves,
+            'search' => $search
+        ]);
     }
+
 }

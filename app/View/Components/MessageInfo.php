@@ -9,11 +9,11 @@ use Illuminate\Contracts\View\View;
 class MessageInfo extends Component
 {
     /**
-     * The information titre.
+     * The information title.
      *
      * @var string
      */
-    public $titre;
+    public $title;
 
     /**
      * The information message.
@@ -25,13 +25,13 @@ class MessageInfo extends Component
     /**
      * Create the component instance.
      *
-     * @param string $titre
+     * @param string $title
      * @param string $message
      * @return void
      */
-    public function __construct($titre, $message)
+    public function __construct($title, $message)
     {
-        $this->titre = $titre;
+        $this->title = $title;
         $this->message = $message;
     }
 
