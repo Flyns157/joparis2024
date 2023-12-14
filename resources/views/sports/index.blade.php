@@ -1,30 +1,5 @@
-<html>
-<head>
-    <title>Liste des sports</title>
-    <style>
-        * {
-            text-align: center;
-            box-sizing: border-box;
-        }
-        table {
-            border: 1;
-        }
-        table * {
-            padding: 5px;
-            align-items: center;
-        }
-        th {
-            background: darkgray;
-            color: white;
-        }
-        td {
-            background: lightgrey;
-        }
-    </style>
-</head>
-<body>
+<x-layout title="Liste des sports">
 <a href="{{route('sports.create')}}">Création de sport</a>
-
 <h2>
     <x-MessageInfo title="Résultat de recherche" :message="count($sports)"/>
     @if($nb_epreuves !== 'all')
@@ -84,5 +59,4 @@
             document.location.href="/sports?nb_epreuves="+form.elements["nb_epreuves"].value+"&sort="+sort;
         }
     </script>
-</body>
-</html>
+</x-layout>

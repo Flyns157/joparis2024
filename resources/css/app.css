@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+    box-sizing: border-box;
+}
+table {
+    border: 1;
+}
+table * {
+    padding: 5px;
+    align-items: center;
+}
+th {
+    background: darkgray;
+    color: white;
+}
+td {
+    background: lightgrey;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
