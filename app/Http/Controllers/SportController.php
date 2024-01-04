@@ -8,6 +8,15 @@ use App\Models\Sport;
 class SportController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
@@ -44,7 +53,7 @@ class SportController extends Controller
      */
     public function create()
     {
-        return view('sports.create', ['title' => 'Création d\'une sport',]);
+        return view('sports.create', ['title' => 'Création d\'un sport',]);
     }
 
     /**

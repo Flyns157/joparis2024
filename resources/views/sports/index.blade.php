@@ -17,32 +17,32 @@
             <a href="{{route('sports.index')}}">Reset search</a>
         @endif
     </form>
-
 </h2>
-
 @if(!empty($sports))
+<div class="container-table100">
 <table>
-    <tr>
-        <th>Nom</th>
-        <th>Description</th>
-        <th>Année d'ajout</th>
-        <th>Nombre de disciplines</th>
-        <th>Nombre d'épreuves</th>
-        <th>Date de début</th>
-        <th>Date de fin</th>
-    </tr>
+    <thead>
+        <th class="column1">Nom</th>
+        <th class="column2">Description</th>
+        <th class="column3">Année d'ajout</th>
+        <th class="column4">Nombre de disciplines</th>
+        <th class="column5">Nombre d'épreuves</th>
+        <th class="column6">Date de début</th>
+        <th class="column7">Date de fin</th>
+    <thead>
     @foreach($sports as $sport)
     <tr>
-        <td>{{$sport['nom']}}</td>
-        <td>{{$sport['description']}}</td>
-        <td>{{$sport['annee_ajout']}}</td>
-        <td>{{$sport['nb_disciplines']}}</td>
-        <td>{{$sport['nb_epreuves']}}</td>
-        <td>{{$sport['date_debut']->format("D M Y")}}</td>
-        <td>{{$sport['date_fin']->format("D M Y")}}</td>
+        <td class="column1">{{$sport['nom']}}</td>
+        <td class="column2">{{$sport['description']}}</td>
+        <td class="column3">{{$sport['annee_ajout']}}</td>
+        <td class="column4">{{$sport['nb_disciplines']}}</td>
+        <td class="column5">{{$sport['nb_epreuves']}}</td>
+        <td class="column6">{{$sport['date_debut']->format("D M Y")}}</td>
+        <td class="column7">{{$sport['date_fin']->format("D M Y")}}</td>
     </tr>
     @endforeach
 </table>
+</div>
 @else
 <h3>Aucun sport</h3>
 @endif

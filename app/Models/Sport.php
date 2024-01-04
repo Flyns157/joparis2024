@@ -17,8 +17,6 @@ class Sport extends Model
         'nb_epreuves',
         'date_debut',
         'date_fin',
-        'updated_at',
-        'created_at'
     ] ;
 
     protected $casts = [
