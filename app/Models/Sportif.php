@@ -15,4 +15,27 @@ class Sportif extends Model
     {
         return $this->belongsToMany(Epreuve::class, 'participations', 'id_sportif', 'id_epreuve');
     }
+    public function getEpreuves()
+    {
+        return $this->epreuves;
+    }
+
+    public function setEpreuves($epreuves)
+    {
+        $this->epreuves()->sync($epreuves);
+    }
+    public function nombreDiscipline()
+    {
+        return $this->epreuves()->distinct('discipline')->count();
+    }
+
+    public function disciplines()
+    {
+        return $this->epreuves()->distinct('discipline')->pluck('discipline');
+    }
+
+    public function nombreEpreuves()
+    {
+        return $this->epreuves()->count();
+    }
 }
