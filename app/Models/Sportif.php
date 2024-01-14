@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sport extends Model
+class Sportif extends Model
 {
     use HasFactory;
 
-    protected $table = 'sport';
+    protected $table = 'sportif';
 
     public function epreuves()
     {
-        return $this->hasMany(Epreuve::class, 'id_sport');
+        return $this->belongsToMany(Epreuve::class, 'participations', 'id_sportif', 'id_epreuve');
     }
 }

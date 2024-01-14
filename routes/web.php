@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TacheController;
-use App\Http\Controllers\SportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +16,3 @@ use App\Http\Controllers\SportController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/taches', [TacheController::class,'index'])->name('taches.index');
-Route::resource('sports', SportController::class);
